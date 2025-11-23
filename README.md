@@ -1,4 +1,4 @@
-# 📝 Aplicación de Lista de Tareas con GraphQL, MongoDB y Docker
+# Aplicación de Lista de Tareas con GraphQL, MongoDB y Docker
 
 Una aplicación full-stack moderna para gestionar tareas, construida con tecnologías actuales.
 
@@ -182,7 +182,8 @@ Base de datos flexible que permite cambiar esquemas fácilmente.
 
 ## Video Explicativo
 
-[Enlace al video en YouTube/Drive]
+- https://youtu.be/DQg52KtFEHk
+- https://github.com/af95correa-rgb/todo-graphql-app
 
 En el video explico:
 - Cómo funciona cada componente

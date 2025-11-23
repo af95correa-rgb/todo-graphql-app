@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tareas - GraphQL</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>📝 Mi Lista de Tareas</h1>
+            <p class="subtitle">Gestión de tareas con GraphQL y MongoDB</p>
+        </header>
+
+        <div class="add-task-form">
+            <input 
+                type="text" 
+                id="taskTitle" 
+                placeholder="Título de la tarea" 
+                class="input-field"
+            />
+            <textarea 
+                id="taskDescription" 
+                placeholder="Descripción (opcional)" 
+                class="input-field textarea-field"
+                rows="3"
+            ></textarea>
+            <button onclick="addTask()" class="btn btn-primary">
+                ➕ Agregar Tarea
+            </button>
+        </div>
+
+        <div id="tasksList" class="tasks-list">
+            <p class="loading">Cargando tareas...</p>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.0/axios.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

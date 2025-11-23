@@ -1,0 +1,55 @@
+# docker-compose.yml
+# Este archivo define todos los servicios de nuestra aplicación
+
+version: '3.8'
+
+services:
+  # SERVICIO 1: MongoDB - Base de datos
+  mongo:
+    image: mongo:7.0  # Usamos la imagen oficial de MongoDB
+    container_name: todo-mongo
+    ports:
+      - "27017:27017"  # Puerto de MongoDB
+    volumes:
+      # Persistimos los datos en un volumen para no perderlos
+      - mongo-data:/data/db
+    networks:
+      - todo-network
+
+  # SERVICIO 2: Backend - API GraphQL
+  backend:
+    build: ./backend  # Construye la imagen desde el Dockerfile del backend
+    container_name: todo-backend
+    ports:
+      - "4000:4000"  # Exponemos el puerto 4000
+    environment:
+      # Variables de entorno para el backend
+      - MONGO_URI=mongodb://mongo:27017/todoapp
+      - PORT=4000
+    depends_on:
+      - mongo  # El backend necesita que MongoDB esté corriendo primero
+    networks:
+      - todo-network
+    # Reinicia automáticamente si hay algún error
+    restart: unless-stopped
+
+  # SERVICIO 3: Frontend - Interfaz web
+  frontend:
+    build: ./frontend  # Construye la imagen desde el Dockerfile del frontend
+    container_name: todo-frontend
+    ports:
+      - "3000:80"  # Mapeamos el puerto 80 del contenedor al 3000 de tu PC
+    depends_on:
+      - backend  # El frontend necesita que el backend esté listo
+    networks:
+      - todo-network
+    restart: unless-stopped
+
+# VOLÚMENES: Para persistir datos
+volumes:
+  mongo-data:  # Almacena los datos de MongoDB
+
+# RED: Para que los contenedores se comuniquen entre sí
+networks:
+  todo-network:
+    driver: bridge

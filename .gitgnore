@@ -1,0 +1,24 @@
+# .gitignore
+# Archivos y carpetas que NO queremos subir a GitHub
+
+# Dependencias de Node.js
+node_modules/
+npm-debug.log*
+
+# Variables de entorno (pueden contener información sensible)
+.env
+.env.local
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+logs/
+*.log

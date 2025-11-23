@@ -2,7 +2,7 @@
 
 Una aplicación full-stack moderna para gestionar tareas, construida con tecnologías actuales.
 
-## 🛠️ Tecnologías Utilizadas
+## Tecnologías Utilizadas
 
 ### Backend
 - **Node.js & Express**: Servidor web
@@ -17,13 +17,13 @@ Una aplicación full-stack moderna para gestionar tareas, construida con tecnolo
 ### DevOps
 - **Docker & Docker Compose**: Contenedorización y orquestación
 
-## 📋 Requisitos Previos
+## Requisitos Previos
 
 - Docker Desktop instalado y corriendo
 - Git (para clonar el repositorio)
 - Navegador web moderno
 
-## 🚀 Instalación y Ejecución
+## Instalación y Ejecución
 
 ### 1. Clonar el repositorio
 
@@ -50,7 +50,7 @@ Este comando:
 - **Backend GraphiQL**: http://localhost:4000/graphql
 - **MongoDB**: localhost:27017
 
-## 📖 Estructura del Proyecto
+## Estructura del Proyecto
 
 ```
 todo-graphql-app/
@@ -76,21 +76,21 @@ todo-graphql-app/
 └── README.md              # Este archivo
 ```
 
-## 🎯 Funcionalidades
+## Funcionalidades
 
-### ✅ Crear Tareas
+### Crear Tareas
 Agrega nuevas tareas con título y descripción opcional.
 
-### 📋 Ver Tareas
+### Ver Tareas
 Visualiza todas tus tareas en una interfaz limpia y moderna.
 
-### ✓ Completar Tareas
+### Completar Tareas
 Marca tareas como completadas o pendientes.
 
-### 🗑️ Eliminar Tareas
+### Eliminar Tareas
 Elimina tareas que ya no necesites.
 
-## 🔍 Probar la API con GraphiQL
+## Probar la API con GraphiQL
 
 Visita http://localhost:4000/graphql y prueba estas queries:
 
@@ -137,7 +137,7 @@ mutation {
 }
 ```
 
-## 🛑 Detener la Aplicación
+## Detener la Aplicación
 
 ```bash
 # Detener los contenedores
@@ -147,7 +147,7 @@ docker-compose down
 docker-compose down -v
 ```
 
-## 🐛 Solución de Problemas
+## Solución de Problemas
 
 ### Los contenedores no inician
 ```bash
@@ -166,7 +166,7 @@ docker-compose logs backend
 - Verifica que el backend esté en el puerto 4000
 - Revisa la consola del navegador para errores
 
-## 📚 Aprendizajes Clave
+## Aprendizajes Clave
 
 ### GraphQL vs REST
 GraphQL permite solicitar exactamente los datos que necesitas, evitando over-fetching o under-fetching.
@@ -180,7 +180,7 @@ Garantiza que la aplicación funcione igual en cualquier entorno.
 ### MongoDB
 Base de datos flexible que permite cambiar esquemas fácilmente.
 
-## 🎥 Video Explicativo
+## Video Explicativo
 
 [Enlace al video en YouTube/Drive]
 
@@ -190,16 +190,10 @@ En el video explico:
 - Los desafíos que enfrenté
 - Cómo resolví los problemas
 
-## 👨‍💻 Autor
+## Autor
 
 Andres Felipe Correa Ramirez
 
-## 📄 Licencia
+## Licencia
 
 Derechos de Autor
-
-## 🙏 Agradecimientos
-
-- Documentación oficial de GraphQL
-- MongoDB University
-- Docker Documentation
